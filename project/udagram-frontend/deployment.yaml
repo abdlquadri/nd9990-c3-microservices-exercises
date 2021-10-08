@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: udagram-api-frontend
-  labels:
+  labels: 
     app: udagram-api-frontend
 spec:
   replicas: 2
@@ -19,4 +19,11 @@ spec:
         image: abdlquadri/udagram-api-frontend:v3
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: 250m
+            memory: 64Mi
+          limits:
+            cpu: 500m
+            memory: 128Mi
 
