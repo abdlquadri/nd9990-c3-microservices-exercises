@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udagram-api-frontend
+  labels:
+    app: udagram-api-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: udagram-api-frontend
+  template:
+    metadata:
+      labels:
+        app: udagram-api-frontend
+    spec:
+      containers:
+      - name: udagram-api-frontend
+        image: abdlquadri/udagram-api-frontend:v3
+        ports:
+        - containerPort: 80
+

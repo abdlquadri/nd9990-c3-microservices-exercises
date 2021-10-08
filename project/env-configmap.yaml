@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_BUCKET: arn:aws:s3:::udagram-abdlquadri
+  AWS_PROFILE: default
+  AWS_REGION: us-east-1
+  POSTGRES_DB: udagram_abdulquadri
+  POSTGRES_HOST: udagram-abdulquadri.c8uqgzyievst.us-east-1.rds.amazonaws.com
+  URL: http://localhost:8100
+metadata:
+  name: env-config
